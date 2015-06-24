@@ -1,0 +1,23 @@
+---
+- name: Install zsh
+  pacman:
+    name: zsh
+
+
+- name: Add Simon user
+  user:
+    name: simon
+    shell: /usr/bin/zsh
+
+- name: Make sure .ssh is present
+  file:
+    path: /home/simon/.ssh/
+    state: directory
+
+- name: Add SSH key for Simon user
+  template:
+    src:   id_rsa.j2
+    dest:  /home/simon/.ssh/id_rsa
+    owner: simon
+    group: simon
+    mode:  0600

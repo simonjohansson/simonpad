@@ -1,0 +1,5 @@
+---
+- pacman: update_cache=yes
+- include: sudo.yml
+- include: user.yml
+- include: packages.yml

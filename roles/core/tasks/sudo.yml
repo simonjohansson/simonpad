@@ -1,0 +1,14 @@
+---
+- name: Install sudo
+  pacman:
+    name: sudo
+
+- name: Configure sudo
+  template:
+    src:   etc_sudoers.j2
+    dest:  "/etc/sudoers"
+    owner: root
+    group: root
+    mode:  0440
+  
+

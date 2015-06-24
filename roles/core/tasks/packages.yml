@@ -1,0 +1,10 @@
+---
+- name: Install packages I want
+  pacman:
+    name: "{{ item }}"
+  with_items:
+    - docker
+    - emacs
+    - jq
+    - trayer
+    - xmonad
