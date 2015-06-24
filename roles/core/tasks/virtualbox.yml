@@ -1,0 +1,17 @@
+---
+- name: Load virtualbox now
+  modprobe:
+    name: "{{ item }}"
+  with_items:
+    - vboxdrv
+    - vboxnetadp
+    - vboxnetflt
+    - vboxpci
+
+- name: Load virtualbox modules on boot
+  template:
+    src:   virtualbox_modules.js
+    dest:  /etc/modules-load.d/virtualbox.conf
+    owner: root
+    group: root
+    mode:  0644
