@@ -3,8 +3,12 @@
   pacman:
     name: "{{ item }}"
   with_items:
-    - docker
     - emacs
+    - docker
     - jq
-    - trayer
+    - xorg
+    - xorg-xinit
+    - xterm
     - xmonad
+    - xmonad-contrib
+    - trayer
