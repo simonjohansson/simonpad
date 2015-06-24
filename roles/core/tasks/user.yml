@@ -8,6 +8,7 @@
   user:
     name: simon
     shell: /usr/bin/zsh
+    password: $6$QMvgoz0dVN2$Sy//xhP8GwbnlRX5st4M00jFne9pm15qj.wE7.OMP5FohOdDOy42N4HssLbU/RJ0Q5urb.YlXf6EbFk1Bzphc1
 
 - name: Make sure .ssh is present
   file:
